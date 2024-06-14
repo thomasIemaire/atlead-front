@@ -1,0 +1,7 @@
+{
+  "name": "athlead",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

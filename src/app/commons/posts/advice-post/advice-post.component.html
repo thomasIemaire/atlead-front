@@ -1,0 +1,30 @@
+<div class="advice-post-container">
+    <div class="header-post">
+        <div class="profil fit-container g8" (click)="goToAccount()">
+            <div class="avatar"></div>
+            <app-user-badge content="coach"></app-user-badge>
+            <div class="username">{{ username }}</div>
+            <div class="certified"><i class="fa-solid fa-check" style="font-size: 4px;"></i></div>
+        </div>
+        <div class="options fit-container vertical-container g2">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div class="body-post">
+        <div class="description">
+            {{ contentAdvice }}
+        </div>
+    </div>
+    <div class="actions-post">
+        <div class="item-action fit-container g8">
+            <i *ngIf="liked === 0" (click)="like()" class="fa-regular fa-heart"></i>
+            <i *ngIf="liked === 1" (click)="unlike()" class="fa-solid fa-heart active"></i>
+            <span>{{ likes }}</span>
+        </div>
+    </div>
+    <div class="footer-post">
+        <span class="datetime">Publié il y a {{ getElapsedTime() }}</span>
+    </div>
+</div>

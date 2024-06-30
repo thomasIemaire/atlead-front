@@ -1,0 +1,35 @@
+<div class="auth-container">
+
+    <img *ngIf="isAuthPage()" class="home-image" src="./../../assets/commons/home-background.svg"
+        alt="background home image">
+
+    <div class="large-container vertical-container">
+        <div class="fit-container g8" style="align-items: center;">
+            <img src="./../../assets/icon/athlead.svg" alt="brand atlead" draggable="false">
+            <div class="brand-name">atlead</div>
+        </div>
+
+        <div *ngIf="isAuthPage()" class="fit-container vertical-container g64">
+
+            <div class="fit-container vertical-container">
+                <div class="main-title">Trouve ton coach sportif</div>
+                <div class="subtitle">Adapté à ton niveau et à n'importe quelle activité</div>
+            </div>
+
+            <div class="fit-container vertical-container center-container g16">
+                <div class="button" (click)="signin()">
+                    <img src="./../../assets/commons/primary-button.svg" alt=".">
+                    <div class="content primary">Se connecter</div>
+                </div>
+                <div class="button" (click)="signup()">
+                    <img src="./../../assets/commons/secondary-button.svg" alt=".">
+                    <div class="content secondary">Créer un compte</div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="!isAuthPage()" class="router-container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

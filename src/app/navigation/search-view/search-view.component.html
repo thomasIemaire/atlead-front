@@ -1,0 +1,14 @@
+<div class="search-container">
+    <div class="form-container vertical-container user-search">
+        <div class="group-form">
+            <input type="text" name="search" id="Search" [(ngModel)]="searchValue" (input)="onSearchChange()" required>
+            <label for="Search">Rechercher un utilisateur</label>
+        </div>
+    </div>
+    <div class="fit-container vertical-container users-list">
+        <div *ngFor="let user of filteredUsers" class="item-user" (click)="goToAccount(user.identifiant)">
+            <i class="fa-solid fa-circle" style="font-size: 32px;"></i>
+            <div class="username">{{ user.username }}</div>
+        </div>
+    </div>
+</div>

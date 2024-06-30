@@ -1,0 +1,16 @@
+<div class="post-advice-container">
+    <div class="form-container vertical-container user-search">
+        <div class="group-area">
+            <input type="text" name="advice" id="Advice" [(ngModel)]="contentAdvice" required>
+            <label for="Advice">Ajouter du texte</label>
+        </div>
+    </div>
+    <div class="actions-post-advice">
+        <div *ngIf="contentAdvice === ''" class="item-action secondary">
+            Publier
+        </div>
+        <div *ngIf="contentAdvice !== ''" class="item-action primary" (click)="publish()">
+            Publier
+        </div>
+    </div>
+</div>

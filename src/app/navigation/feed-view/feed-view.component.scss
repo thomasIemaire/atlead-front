@@ -1,0 +1,21 @@
+.feed-container {
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 16px 16px 0 16px;
+}
+
+.feed-container .top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.feed-container .top-container .brand {
+    width: 40px;
+}

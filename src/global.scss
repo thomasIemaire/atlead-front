@@ -34,4 +34,214 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+/* @import "@ionic/angular/css/palettes/dark.system.css"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: rgb(249, 249, 249);
+    --primary-color: rgb(218, 67, 67);
+}
+
+:root {
+    --primary-font-family: 'Titillium Web';
+    --secondary-font-family: 'Poppins';
+}
+
+ion-content {
+    z-index: 0;
+    background-color: #e5e5e5;
+    font-family: var(--secondary-font-family) !important;
+}
+
+ion-refresher {
+    top: 20px;
+    background-color: #e5e5e5;
+}
+
+body {
+    background-color: var(--background-color);
+    color: #150000;
+    font-family: var(--secondary-font-family);
+}
+
+.main-spinner {
+    color: var(--primary-color) !important;
+    font-size: 32px !important;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth-container {
+    margin: 64px 32px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-container {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 2 * 64px);
+    width: calc(100vw - 2 * 32px);
+}
+
+.fit-container {
+    display: flex;
+}
+
+.vertical-container {
+    flex-direction: column;
+}
+
+.g2 {
+    gap: 2px;
+}
+
+.g4 {
+    gap: 4px;
+}
+
+.g8 {
+    gap: 8px;
+}
+
+.g16 {
+    gap: 16px;
+}
+
+.g32 {
+    gap: 32px;
+}
+
+.g64 {
+    gap: 64px;
+}
+
+.button {
+    max-height: 53px;
+    min-height: 53px;
+    height: 53px !important;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.button .primary {
+    color: var(--background-color);
+}
+
+.button .secondary {
+    color: #150000;
+}
+
+.child-router-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+}
+
+.form-container .group-form,
+.form-container .group-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-container .group-form .required,
+.form-container .group-area .required {
+    font-size: .85em;
+    color: var(--primary-color);
+}
+
+.form-container .group-form input[type=text],
+.form-container .group-form input[type=password],
+.form-container .group-area input[type=text] {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 1px;
+    padding: 4px;
+    font-size: 16px;
+    transition: .1s ease-in-out 0s all;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+}
+
+.form-container .group-form input[type=text]:focus,
+.form-container .group-form input[type=password]:focus,
+.form-container .group-area input[type=text]:focus {
+    outline: none;
+    border-bottom: solid 1px var(--primary-color);
+}
+
+.form-container .group-form label,
+.form-container .group-area label {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    gap: 4px;
+    left: 4px;
+    top: 4px;
+    transition: .1s ease-in-out 0s all;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--primary-font-family) !important;
+}
+
+.form-container .group-form input[type=text]:focus+label,
+.form-container .group-form input[type=password]:focus+label {
+    font-size: 12px;
+    top: -14px;
+    color: var(--primary-color);
+}
+
+.form-container .group-form input[type=text]:valid+label,
+.form-container .group-form input[type=password]:valid+label {
+    font-size: 12px;
+    top: -14px;
+}
+
+.form-container .group-area input[type=text]:focus+label,
+.form-container .group-area input[type=text]:valid+label {
+    display: none;
+}
+
+.form-container .group-form .show-password {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    padding: 4px;
+    max-width: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    cursor: pointer;
+}

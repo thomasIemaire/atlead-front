@@ -1,0 +1,41 @@
+.main-container .main-navigation,
+.main-container .main-body {
+    background-color: var(--background-color);
+}
+
+.main-container .main-navigation {
+    height: 50px;
+    width: 100%;
+}
+
+.main-container .main-body {
+    height: calc(100% - 50px);
+    max-height: calc(100% - 50px);
+    min-height: calc(100% - 50px);
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.main-container .main-navigation {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: solid 1px #e5e5e5;
+}
+
+.main-container .main-navigation .item-navigation {
+    margin: 3px;
+    font-size: 24px;
+}
+
+.main-container .main-navigation .item-navigation .active {
+    color: var(--primary-color);
+}
+
+.main-container .main-navigation .item-navigation .active-border {
+    border-radius: 100px;
+    border: 2px solid var(--primary-color) !important;
+}

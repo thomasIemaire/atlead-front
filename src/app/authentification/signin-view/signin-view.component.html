@@ -1,0 +1,26 @@
+<div class="child-router-container">
+    <div class="form-container vertical-container g32">
+        <div class="group-form">
+            <input type="text" name="identifiant" id="Identifiant" [(ngModel)]="identifiant" required>
+            <label for="Identifiant">Identifiant<span class="required">*</span></label>
+        </div>
+        <div class="group-form">
+            <input type="password" name="password" id="Password" [(ngModel)]="password" required>
+            <label for="Password">Mot de passe<span class="required">*</span></label>
+            <div class="show-password" (click)="toggleShowPassword()">
+                <i *ngIf="!showPassword" class="fa-solid fa-eye"></i>
+                <i *ngIf="showPassword" class="fa-solid fa-eye-slash"></i>
+            </div>
+        </div>
+    </div>
+    <div class="fit-container center-container">
+        <div class="button" (click)="back()">
+            <img src="./../../assets/commons/secondary-button-s.svg" alt=".">
+            <div class="content secondary"><i class="fa-solid fa-caret-left"></i></div>
+        </div>
+        <div class="button" (click)="signin()">
+            <img src="./../../assets/commons/primary-button-m.svg" alt=".">
+            <div class="content primary">Se connecter</div>
+        </div>
+    </div>
+</div>

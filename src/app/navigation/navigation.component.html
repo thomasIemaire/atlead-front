@@ -1,0 +1,20 @@
+<div class="main-container vertical-container">
+    <div class="main-body">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="main-navigation">
+        <div class="item-navigation" (click)="goToFeed()">
+            <i class="fa-solid fa-house" routerLink="/feed" routerLinkActive="active"></i>
+        </div>
+        <div class="item-navigation" (click)="goToSearch()">
+            <i class="fa-solid fa-magnifying-glass" routerLink="/search" routerLinkActive="active"></i>
+        </div>
+        <div class="item-navigation">
+            <i class="fa-solid fa-fire"></i>
+        </div>
+        <div class="item-navigation" (click)="goToUser()">
+            <i class="fa-solid fa-circle" style="border: 2px solid var(--background-color);" [routerLink]="getUserUrl()"
+                routerLinkActive="active-border"></i>
+        </div>
+    </div>
+</div>

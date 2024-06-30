@@ -1,0 +1,26 @@
+.post-advice-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.post-advice-container .actions-post-advice .item-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 3px;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.post-advice-container .actions-post-advice .primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.post-advice-container .actions-post-advice .secondary {
+    background-color: #e5e5e5;
+}

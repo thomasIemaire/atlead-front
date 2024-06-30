@@ -1,0 +1,63 @@
+.advice-post-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.advice-post-container .header-post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+}
+
+.advice-post-container .header-post .profil .username {
+    font-size: 16px;
+}
+
+.advice-post-container .header-post .profil .place {
+    font-size: 12px;
+    color: #c1c1c1;
+}
+
+.advice-post-container .body-post .picture {
+    width: 100vw;
+    height: 100vw;
+}
+
+.advice-post-container .body-post .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advice-post-container .actions-post {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.advice-post-container .actions-post .item-action {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.advice-post-container .actions-post .item-action i {
+    font-size: 24px;
+}
+
+.advice-post-container .actions-post .item-action span {
+    font-size: 12px;
+}
+
+.advice-post-container .footer-post .datetime {
+    font-size: 12px;
+    color: #c1c1c1;
+    padding: 0 16px;
+}

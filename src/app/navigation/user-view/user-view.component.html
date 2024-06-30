@@ -1,0 +1,71 @@
+<ion-content>
+    <ion-refresher slot="fixed" [pullFactor]="0.5" [pullMin]="110" [pullMax]="150" (ionRefresh)="getUserInformations($event)">
+        <ion-refresher-content pullingIcon="chevron-down" pullingText="Pousser pour recharger"
+            refreshingSpinner="circles" refreshingText="Chargement...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div *ngIf="accountIsLoaded" class="user-container">
+        <div class="header-user">
+            <div class="avatar">
+                <i class="fa-solid fa-circle" style="font-size: 92px;"></i>
+            </div>
+            <div class="statistics">
+                <div class="item-statistic">
+                    <span class="value">0</span>
+                    <span class="key">succès</span>
+                </div>
+                <div class="item-statistic">
+                    <span class="value">{{ subscriber }}</span>
+                    <span class="key">abonnés</span>
+                </div>
+                <div class="item-statistic">
+                    <span class="value">{{ subscription }}</span>
+                    <span class="key">abonnements</span>
+                </div>
+            </div>
+        </div>
+        <div class="informations-user">
+            <div class="name">
+                <span class="firstname">{{ username }}</span>
+                <!-- <span class="lastname">Deschamps</span> -->
+            </div>
+            <div class="description">
+                <!-- <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero maxime ad perspiciatis quasi
+                    repellendus repudiandae quisquam impedit.
+                </span> -->
+            </div>
+        </div>
+        <div *ngIf="!isMyAccount" class="actions-user">
+            <div *ngIf="!isSubscribed" class="item-action primary" (click)="subscribe()">
+                S'abonner
+            </div>
+            <div *ngIf="isSubscribed" class="item-action secondary" (click)="unsubscribe()">
+                Se désabonner
+            </div>
+            <div class="item-action secondary">
+                Écrire
+            </div>
+        </div>
+        <div *ngIf="isMyAccount" class="actions-user">
+            <div class="item-action secondary">
+                Modifier mon compte
+            </div>
+        </div>
+        <div class="navigation-user">
+            <div class="item-navigation" (click)="goToAdvice()">
+                <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <div class="item-navigation" (click)="goToPicture()">
+                <i class="fa-solid fa-image"></i>
+            </div>
+            <div class="navigation-indicator" #NavigationIndicator></div>
+        </div>
+        <div class="content-user">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div *ngIf="!accountIsLoaded" class="main-container center-container">
+        <i class="fa-solid fa-circle-notch fa-spin main-spinner"></i>
+    </div>
+</ion-content>

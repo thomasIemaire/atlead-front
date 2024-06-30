@@ -1,0 +1,121 @@
+.user-container {
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.user-container .header-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 8px;
+}
+
+.user-container .header-user .statistics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    gap: 32px;
+}
+
+.user-container .header-user .statistics .item-statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.user-container .header-user .statistics .item-statistic .value {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user-container .header-user .statistics .item-statistic .key {
+    font-size: 14px;
+}
+
+.user-container .informations-user {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.user-container .informations-user .name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.user-container .informations-user .description {
+    font-size: 14px;
+}
+
+.user-container .actions-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.user-container .actions-user .item-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 3px;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.user-container .actions-user .primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.user-container .actions-user .secondary {
+    background-color: #e5e5e5;
+}
+
+.user-container .navigation-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-container .navigation-user .item-navigation {
+    width: calc(100% / 2);
+    padding: 8px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-container .navigation-user .navigation-indicator {
+    position: absolute;
+    width: calc(100% / 2);
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    transition: .1s ease-in-out 0s all;
+}
+
+.user-container .content-user {
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

@@ -1,0 +1,7 @@
+<div *ngIf="feedLoading">
+    <div *ngFor="let advice of advices" style="min-width: 100vw;">
+        <app-advice-post [rowid]="advice.rowid" [identifiant]="advice.identifiant" [username]="advice.username"
+            [contentAdvice]="advice.advice" [likes]="advice.like_count" [liked]="advice.user_liked"
+            [datetime]="advice.datetime"></app-advice-post>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+.advice-post-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.advice-post-container .header-post {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advice-post-container .header-post,
+.advice-post-container .header-post .profil {
+    align-items: center;
+}
+
+.advice-post-container .header-post .profil .avatar {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.advice-post-container .header-post .profil .username {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.advice-post-container .header-post .profil .certified {
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    background-color: #3eb5cf;
+    color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advice-post-container .header-post .options .dot {
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+}
+
+.advice-post-container .body-post .description {
+    font-size: 12px;
+}
+
+.advice-post-container .actions-post .item-action {
+    align-items: center;
+}
+
+.advice-post-container .actions-post .item-action i {
+    font-size: 24px;
+}
+
+.advice-post-container .actions-post .item-action .active {
+    color: var(--primary-color);
+}
+
+.advice-post-container .actions-post .item-action span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.advice-post-container .footer-post {
+    display: flex;
+    height: auto;
+}
+
+.advice-post-container .footer-post .datetime {
+    font-size: 8px;
+    color: #c1c1c1;
+}
